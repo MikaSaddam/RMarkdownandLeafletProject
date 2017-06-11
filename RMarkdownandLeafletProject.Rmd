@@ -1,0 +1,25 @@
+---
+title: "Course 9 Week 2 Assignment:"
+author: "Azman Ali"
+date: "June 4, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## The Assignment Task:
+
+This assignment relates to creating a web page using R Markdown that features a map created using Leaflet and it contains the date created. In this example, I'm using my working place as an example location. Click on the Marker Icon to view more information
+
+```{r Interactive Map}
+library(leaflet)
+my_map = leaflet()
+my_map = addTiles(my_map)
+my_map = addMarkers(my_map,lat=3.0670558, lng=101.4708917, popup = "CUBE GLOBAL- EMPLOYEES-37. OFFICE ADDRESS: 38A, Jalan Keluli, AQ7/AQ, Pusat Perniagaan Bukit Raja, Seksyen 7, Shah Alam, Selangor Darul Ehsan, Malaysia")
+my_map = setView(my_map,lat=3.0670558, lng=101.4708917, zoom = 16)
+77
+my_map
+```
+
